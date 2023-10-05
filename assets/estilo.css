@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@200&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    animation: dark-to-light 0.4s ease-in-out;
+}
+
+section{
+    border-radius: 25px;
+    border:  1px solid rgb(0, 0, 0, 0.3) ;
+    box-shadow: 2px 4px 4px rgba(76, 43, 226, 0.4);
+    display: flex;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+section .img-login{
+    width: 650px;
+    height: 520px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#card1 .p-login{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+}
+#card1 .p-login::before{
+    position: absolute;
+    content:'' ;
+    width: 20px;
+    background-color: rgb(76, 43, 226);
+    height: 3px;
+    bottom: 2px;
+    right: 27px;
+    border-radius: 5px;
+}
+
+#mode_icon{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 680px;
+}
+#login-moon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#intro h1{
+    display: flex;
+    justify-content: center;
+    font-size: 47px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+#intro  h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(84, 84, 84);
+    font-size: 18px;
+    margin: 0px 30px;
+}
+
+#card1 .p-entrar{
+    display: flex;
+    justify-content: center;
+    color: rgb(76, 43, 226);
+    font-weight: bold;
+    font-size: 18px;
+    margin: 35px 0px 10px 0px;
+}
+
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login input{
+    margin-top: 10px;
+    border:  1px solid rgb(0, 0, 0, 0.3);
+    /* box-shadow: 1px 2px px rgb(84, 84, 84); */
+    width: 220px;
+    border-radius: 10px;
+    padding: 10px;
+}
+input:focus{
+    outline: none;
+    font-weight: bold;
+}
+input::placeholder{
+    color: rgb(84, 84, 84) ;
+}
+
+#login #senha{
+    position: relative;
+}
+
+#login i{
+    color: rgb(84, 84, 84) ;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    margin: 65px 0px 0px 180px;
+}
+
+
+
+#forget{
+    display: flex;
+    justify-content: center;
+    margin-left: -110px;
+    font-size: 12px;
+    color: rgb(76, 43, 226);
+    text-decoration: none;
+}
+#forget:hover{
+    text-decoration: underline;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-entrar{
+    margin-top: 10px;
+    color: #fff;
+    background-color: rgb(76, 43, 226);
+    width: 160px;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 800 ;
+    transition: all ease-in-out .5s;
+}
+#button-entrar:hover{
+    background-color: rgba(76, 43, 226, 0.715); 
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+#criar{
+    color: rgb(9, 9, 9);
+    margin-top: 60px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+}
+#criar:hover{
+    filter: drop-shadow( 18px 10px 0px rgb(81,81,81, 0.7));
+}
+
+
+.dark#tudo {
+    color: #ffffff ;
+    background-color: #312d37 ;
+    animation: light-to-dark 0.4s ease-in-out;
+}
+
+.dark#tudo #botoes #criar, 
+.dark#tudo #intro h2,
+.dark#tudo input::placeholder{
+    color: #9e9e9e ;
+}
+
+.dark#tudo input{
+    border: 1px solid #9e9e9e;
+    background-color: transparent;
+    color: #9e9e9e;
+}
+.dark#tudo input:focus{
+    font-weight: bolder;
+}
+
+
+
+@keyframes dark-to-light{
+    0%{
+        background-color: #312d37 ;
+    }
+
+    100%{
+        background-color: #f8fafc;
+    }
+}
+
+@keyframes light-to-dark{
+    0%{
+        background-color: #f8fafc;
+    }
+
+    100%{
+        background-color: #312d37 ;
+    }
+}
+
+
+
+@media screen and (max-width: 800px){
+    section{
+        margin:10px;
+    }
+
+    section .img-login{
+        display: none;
+    }
+
+    #card1 .p-login{
+        font-size: 16px;
+        margin-top: -50px;
+    }
+
+    #card1 .p-login::before{
+        width: 18px;
+        right: 25px;
+    }
+
+    #mode_icon{
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+    #intro h1{
+        text-align: center;
+        font-size: 36px;
+    }
+    
+    #intro  h2{
+        font-size: 15px;
+    }
+    
+    #card1 .p-entrar{
+        font-size: 16px;
+    }
+
+    #login input{
+        width: 180px;
+        padding: 6px;
+    }
+
+    #login i{
+        font-size: 14px;
+        margin: 55px 0px 0px 140px;
+    }
+    
+
+    #forget{
+        margin-left: -85px;
+        font-size: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    #button-entrar{
+        width: 130px;
+    }
+    
+    #criar{
+        margin-bottom: 20px;
+    }
+} 
